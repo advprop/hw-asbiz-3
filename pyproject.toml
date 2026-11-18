@@ -1,0 +1,13 @@
+[project]
+name = "hse-rag-homework"
+version = "0.1.0"
+requires-python = ">=3.13"
+dependencies = [
+    "numpy>=2.5.5",
+    "ocrmac>=1.0.1",
+    "openpyxl>=3.1.5",
+    "pymupdf>=2.1",
+    "python-dotenv>=1.2.4",
+    "rank-bm25>=0.2.2",
+    "requests>=2.34.2",
+]

@@ -8,3 +8,4 @@ __pycache__/
 outputs/
 index/
 /data/reports/
+artifacts/embeddings_partial.jsonl
