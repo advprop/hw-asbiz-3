@@ -1,17 +1,16 @@
-"""Из корня репозитория: python -m eval.evaluator_langsmith ИМЯ_ДАТАСЕТА"""
-
 import argparse
 from time import perf_counter
 
 from langsmith import Client
 
-from eval.eval_functions import score_answer, score_context
-from eval.rag_example import RAG
+from eval.eval_functions import score_context
+from eval.evaluator_excel import judge
+from rag.pipeline import RAG
 
 
 def metrics(outputs, reference_outputs):
     context = score_context(reference_outputs["gold_context"], outputs["context"])
-    answer = score_answer(reference_outputs["gold_answer"], outputs["answer"])
+    answer = judge(reference_outputs["gold_answer"], outputs["answer"])
     return [
         {"key": "context_recall", "score": context["context_recall"]},
         {"key": "context_precision", "score": context["context_precision"]},
@@ -34,6 +33,6 @@ def evaluate(dataset_name):
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description=__doc__)
+    parser = argparse.ArgumentParser()
     parser.add_argument("dataset_name")
     evaluate(parser.parse_args().dataset_name)
