@@ -9,3 +9,4 @@ outputs/
 index/
 /data/reports/
 artifacts/embeddings_partial.jsonl
+test_results.jsonl
