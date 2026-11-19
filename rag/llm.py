@@ -11,7 +11,7 @@ load_dotenv()
 
 URL = "https://claude.gigaparsers.ru/v1/messages"
 MODEL = "deepseek-flash"
-ATTEMPTS = 8
+ATTEMPTS = 12
 
 # лимит ключа 10 запросов в минуту, судья в eval ходит через этот же лимитер
 limiter = RateLimiter(per_minute=float(os.environ.get("LLM_RPM", 9.5)), burst=2)

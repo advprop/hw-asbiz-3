@@ -39,4 +39,4 @@ def retry_pause(attempt, retry_after=None):
             return float(retry_after) + random.uniform(0, 0.5)
         except ValueError:
             pass
-    return min(30.0, 2.0**attempt) + random.uniform(0, 1)
+    return min(60.0, 2.0**attempt) + random.uniform(0, 1)

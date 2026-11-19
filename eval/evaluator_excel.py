@@ -17,7 +17,7 @@ from rag.pipeline import RAG
 
 METRICS = ("context_recall", "context_precision", "answer_correctness", "time")
 COLUMNS = ("question_id", "question", "gold_context", "gold_answer", "context", "answer", *METRICS)
-JUDGE_ATTEMPTS = 6
+JUDGE_ATTEMPTS = 15
 
 
 def read_items(dataset_path):

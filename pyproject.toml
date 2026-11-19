@@ -3,6 +3,7 @@ name = "hse-rag-homework"
 version = "0.1.0"
 requires-python = ">=3.13"
 dependencies = [
+    "langsmith>=0.15.0",
     "numpy>=2.5.5",
     "ocrmac>=1.0.1",
     "openpyxl>=3.1.5",
